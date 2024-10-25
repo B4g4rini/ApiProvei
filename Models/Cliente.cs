@@ -13,6 +13,11 @@ namespace ApiProvei.Models
         public string ClienteNome { get; set; }
 
 
+        [Required(ErrorMessage = "O Campo CPF é obrigatório")]
+        [StringLength(14, ErrorMessage = "O campo CPF deve ter no máximo 14 caracteres")]
+        public string CPF { get; set; }
+
+
 
 
         [Display(Name = "E-mail")]
